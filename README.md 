@@ -20,9 +20,7 @@ The system:
 
 ## 🏗️ Architecture
 
-<p align="center">
-  <img src="graph.png" alt="Graph Architecture">
-</p>
+![Graph Architecture](graph.jpg)
 
 The system is modeled as a **graph workflow** where each step is a modular node.
 
