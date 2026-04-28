@@ -1,0 +1,118 @@
+# 🚀 Advanced RAG System with LangGraph
+
+An advanced **Retrieval-Augmented Generation (RAG)** system built with **LangGraph**, designed to improve answer reliability using document grading, hallucination detection, and dynamic routing.
+
+---
+
+## 🧠 Overview
+
+This project implements a **decision-based RAG pipeline** instead of a simple retrieve-and-generate approach.
+
+The system:
+- Retrieves documents from a vector database
+- Filters irrelevant context
+- Detects hallucinations
+- Evaluates answer quality
+- Dynamically switches between **vector search** and **web search**
+
+---
+
+## 🏗️ Architecture
+
+![Graph Architecture](graph.png)
+
+The system is modeled as a **graph workflow** where each step is a modular node.
+
+---
+
+## ⚙️ Pipeline Flow
+
+1. Route question → RAG or Web Search
+2. Retrieve documents
+3. Grade document relevance
+4. Generate answer
+5. Check hallucinations
+6. Grade answer quality
+7. Retry or reroute if necessary
+
+---
+
+## 🔥 Features
+
+- Graph-based orchestration with **LangGraph**
+- Vector search using **Chroma**
+- Document relevance grading
+- Hallucination detection
+- Answer validation
+- Adaptive routing between RAG and web search
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- LangGraph
+- LangChain
+- Chroma
+- OpenAI API
+- Pydantic
+
+---
+
+## 📁 Project Structure
+
+graph/
+├── nodes/
+│ ├── retrieve.py
+│ ├── generate.py
+│ ├── grade_documents.py
+│ ├── web_search.py
+│
+├── chains/
+│ ├── retrieval_grader.py
+│ ├── hallucination_grader.py
+│ ├── answer_grader.py
+│ ├── router.py
+│
+├── graph.py
+├── state.py
+
+main.py
+
+---
+
+## 🧪 Example
+
+**Input:**
+
+What is the current weather in Istanbul ?
+
+**Output:**
+
+Cloudy with light rain showers, temperatures between 9–17°C.
+---
+
+✔ Retrieved from documents
+✔ Verified for hallucination
+✔ Answer quality checked
+
+---
+
+## 🎯 Why This Project Matters
+
+This project demonstrates:
+- Advanced RAG architecture
+- Reliable LLM system design
+- Modular and scalable pipelines
+- Decision-based AI workflows
+
+---
+## 👩‍💻 Author
+
+İrem Dinç
+
+---
+
+## ⭐️ Support
+
+If you found this project useful, consider giving it a ⭐️ on GitHub!
